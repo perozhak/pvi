@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Perozhak PVI</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="chess-desk">
+            <table>
+                <tr>
+                    <td class="wk tbl-left">1<br><br><br></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="wp tbl-left">2<br><br><br></td>
+                    <td class="wp"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="wr"></td>
+                    <td></td>
+                    <td class="wp"></td>
+                    <td class="wp"></td>
+                </tr>
+                <tr>
+                    <td class="tbl-left">3<br><br><br></td>
+                    <td></td>
+                    <td class="wp"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="bb"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tbl-left">4<br><br><br></td>
+                    <td></td>
+                    <td></td>
+                    <td class="wp"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tbl-left">5<br><br><br></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tbl-left">6<br><br><br></td>
+                    <td class="bp"></td>
+                    <td></td>
+                    <td class="bp"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="wb"></td>
+                </tr>
+                <tr>
+                    <td class="bp tbl-left ">7<br><br><br></td>
+                    <td></td>
+                    <td class="bp"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="wr"></td>
+                </tr>
+                <tr>
+                    <td class="tbl-left"> 8<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; h</td>
+                    <td class="bk"><br><br>g</td>
+                    <td class="br"><br><br>f</td>
+                    <td><br><br>e</td>
+                    <td><br><br>d</td>
+                    <td><br><br>c</td>
+                    <td class="br"><br><br>b</td>
+                    <td class="bb"><br><br>a</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="info">
+            <form id="myForm" action="" onsubmit="submitClicked(event)">
+                <section class="userInfo">
+
+                    <div class="input-block inp">
+                        <input type="text" name="username" value="" onchange="this.setAttribute('value', this.value);" pattern="[0-9A-Za-z].{1,}" maxlength="28" id="username" required title="Must contain at least 2 symbols (only letters and numbers)">
+                        <span class="placeholder">
+                            Username
+                        </span>
+                    </div>
+
+                    <div class="input-block inp">
+                        <input type="password" value="" onchange="this.setAttribute('value', this.value);" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" maxlength="50"
+                            name="passw" id="passw" required>
+                        <span class="placeholder">
+                            Password
+                        </span>
+
+
+
+                    </div>
+
+                    <input hidden type="text" name="email" id="email">
+                    <input type="hidden" name="email2" id="email2">
+
+                    <div class="input-block inp">
+
+                        <input list="ages" name="age" id="age" value="" onchange="this.setAttribute('value', this.value);" required>
+                        <span class="placeholder">
+                            Age
+                        </span>
+                        <datalist id="ages">
+                            <option value=" < 18"></option>
+                            <option value="19-25"></option>
+                            <option value="25 - 40"></option>
+                            <option value=" > 40"></option>
+                        </datalist>
+                    </div>
+                </section>
+                <section class="sex">
+                    <label for="male">Male</label>
+                    <input type="radio" name="sex" id="male" value="male" checked>
+                    <label for="female">Female</label>
+                    <input type="radio" name="sex" id="female" value="female">
+                </section>
+                <section>
+                    <label for="age">
+
+                    </label>
+                </section>
+                <section class="addInfo">
+                    <label for="addInfo">Here you can write some additional info about yourself</label>
+                    <textarea name="addInfo" id="addInfo" cols="30" rows="10"></textarea>
+                </section>
+                <input id="subm" type="submit" value="Sign Up">
+            </form>
+            <div class="ln">
+                <div class="myTask"><a href="https://www.chess.com/puzzles/problem/109540">Online Puzzle</a></div>
+                <div class="rules"><a href="https://www.chess.com/learn-how-to-play-chess">Rules</a></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
