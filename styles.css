@@ -58,6 +58,7 @@ tr:nth-child(2n+1) td:nth-child(2n) {
 
 .info {
     background-color: #272522;
+    min-width: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -213,4 +214,50 @@ div.input-block input:not([value=""]):invalid+span.placeholder {
 
 .bp {
     background-image: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bp.png');
+}
+
+table,
+.info {
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width:1160px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:1025px) {
+    table {
+        transform: scale(0.8) translateY(-100px);
+        transition: all 0.5s ease;
+    }
+    .info {
+        transform: scale(0.9) translateY(-200px);
+        transition: all 0.5s ease;
+    }
+}
+
+@media screen and (max-width:769px) {
+    table,
+    .info {
+        transform: scale(0.6) translateY(-270px) translateX(70px);
+        transition: all 0.5s ease;
+    }
+    .info {
+        transform: scale(0.7) translateY(-600px) translateX(70px);
+    }
+}
+
+@media screen and (max-width:450px) {
+    table {
+        transform: scale(0.45) translateY(-600px) translateX(80px);
+        transition: all 0.5s ease;
+    }
+    .info {
+        transform: scale(0.7) translateY(-830px) translateX(50px);
+        transition: all 0.5s ease;
+    }
 }
