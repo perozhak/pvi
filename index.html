@@ -13,7 +13,13 @@
 <body>
     <div class="container">
         <div class="chess-desk">
-            <table>
+            <div class="timer" style="font-size:24px; color:#312e2b">
+                <span id="hours">0</span>&nbsp;:
+                <span id="minutes">0</span>&nbsp;:
+                <span id="seconds">0</span>
+                <span id="milisec"></span>
+            </div>
+            <table id="my_table">
                 <tr>
                     <td class="wk tbl-left">1<br><br><br></td>
                     <td></td>
@@ -151,9 +157,14 @@
                     <textarea name="addInfo" id="addInfo" cols="30" rows="10"></textarea>
                 </section>
 
-                <input id="subm" type="submit" value="Sign Up">
+                <input class="btn" id="subm" type="submit" value="Sign Up">
 
             </form>
+            <button class="btn" id="start">
+                START
+            </button>
+
+
 
             <div class="ln">
                 <div class="myTask"><a href="https://www.chess.com/puzzles/problem/109540">Online Puzzle</a></div>
@@ -165,8 +176,10 @@
 
 
     </div>
+    <canvas id="chart"></canvas>
 
 </body>
 <script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 </html>

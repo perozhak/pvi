@@ -102,7 +102,7 @@ section.addInfo {
     flex-flow: column wrap;
 }
 
-#subm {
+.btn {
     font-size: 1.4em;
     background-color: #769656;
     border-radius: 5px;
@@ -113,12 +113,12 @@ section.addInfo {
     align-self: flex-end;
 }
 
-#subm:hover {
+.btn:hover {
     background-color: #769750;
     transform: scale(1.1);
 }
 
-#subm:active {
+.btn:active {
     background-color: #769000;
 }
 
@@ -216,6 +216,10 @@ div.input-block input:not([value=""]):invalid+span.placeholder {
     background-image: url('https://images.chesscomfiles.com/chess-themes/pieces/neo/150/bp.png');
 }
 
+.timer {
+    transform: translateX(70px) translateY(15px);
+}
+
 table,
 .info {
     transition: all 0.5s ease;
@@ -249,6 +253,12 @@ table,
     .info {
         transform: scale(0.7) translateY(-600px) translateX(70px);
     }
+    .timer {
+        transform: scale(0.7) translateX(70px);
+    }
+    #chart {
+        transform: translateY(-470px);
+    }
 }
 
 @media screen and (max-width:450px) {
@@ -259,5 +269,11 @@ table,
     .info {
         transform: scale(0.7) translateY(-800px) translateX(50px);
         transition: all 0.5s ease;
+    }
+    .timer {
+        transform: scale(0.7) translateX(170px);
+    }
+    #chart {
+        transform: translateX(50px) translateY(-650px);
     }
 }
